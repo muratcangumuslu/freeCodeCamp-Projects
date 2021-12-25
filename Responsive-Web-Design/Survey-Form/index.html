@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Survey</title>
 </head>
 <body>
     <div class="container">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="form-group">
-                <p>The question for the options</p>
+                <p>Which course did you take in the last academic year?</p>
                 <select name="language" id="dropdown" required>
                     <option disabled selected value>Select current language</option>
                     <option value="english">English</option>
@@ -88,7 +88,59 @@
                            class="input-radio"
                            value="Very unlikely">
                 </label>
-                
+            </div>
+
+            <div class="form-group">
+                <p>What is your main reason for learning a new language?</p>
+
+                <label for="work">Work
+                    <input type="checkbox" 
+                           name="purpose" 
+                           class="input-checkbox" 
+                           value="work">
+                </label>
+
+                <label for="academic">Academic
+                    <input type="checkbox" 
+                           name="purpose" 
+                           class="input-checkbox" 
+                           value="academic">
+                </label>
+
+                <label for="language-interest">Personal interest in languages
+                    <input type="checkbox" 
+                           name="purpose" 
+                           class="input-checkbox" 
+                           value="language-interest">
+                </label>
+
+               
+                <label for="other">Other
+                    <input type="checkbox" 
+                           name="purpose" 
+                           class="input-checkbox" 
+                           value="other">
+                </label>
+
+                <label id="other-reason-label" for="other-reason">If you have chosen other, please describe your reason briefly.
+                <input type="text"
+                       name="other-reason"
+                       id="other-reason">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>Your comments and suggestions.</p>
+                <textarea name="comments" 
+                          id="comments" 
+                          cols="30" rows="10"
+                          placeholder="Please write here"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
             </div>
         </form>
     </div>
