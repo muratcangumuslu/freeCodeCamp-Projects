@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <header>
-            <h1 id="title">Some survey title</h1>
-            <p id="description">Description of the survey</p>
+            <h1 id="title">Foreign Language Courses Survey</h1>
+            <p id="description">Thank you for feedback for the language courses provided by our department</p>
         </header>
 
         <form id="survey-form">
@@ -31,8 +31,64 @@
                 <input type="email"
                        name="email"
                        id="email"
-                       placeholder="Your Email Adress"
+                       placeholder="Your email address"
                        required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number"
+                       name="age"
+                       id="number"
+                       min="10"
+                       max="100"
+                       placeholder="Your age">
+            </div>
+
+            <div class="form-group">
+                <p>The question for the options</p>
+                <select name="language" id="dropdown" required>
+                    <option disabled selected value>Select current language</option>
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="german">German</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="chinese">Chinese</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>How likely are you to recommend our courses to your friends?</p>
+                
+                <label>Very likely
+                    <input type="radio" 
+                           name="student-recommend" 
+                           class="input-radio" 
+                           value="Very likely" 
+                           checked>
+                </label>
+                
+                <label>Somewhat likely
+                     <input type="radio" 
+                           name="student-recommend" 
+                           class="input-radio" 
+                           value="Somewhat likely">
+                </label>
+                
+                <label>Somewaht unlikely
+                    <input type="radio" 
+                           name="student-recommend"
+                           class="input-radio"
+                           value="Somewhat unlikely">
+                </label>
+                   
+                <label>Very unlikely
+                    <input type="radio"
+                           name="student-recommend"
+                           class="input-radio"
+                           value="Very unlikely">
+                </label>
+                
             </div>
         </form>
     </div>
