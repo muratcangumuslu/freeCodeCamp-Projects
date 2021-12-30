@@ -36,18 +36,20 @@
             </div>
 
             <div class="form-group">
-                <label id="age-label" for="age">Age</label>
+                <label id="number-label" for="number">Age</label>
                 <input type="number"
                        name="age"
-                       id="age"
+                       id="number"
                        min="10"
-                       max="100">
+                       max="100"
+                       placeholder="18">
+                       
             </div>
 
             <div class="form-group">
                 <p>Which course did you take in the last academic year?</p>
                 <select name="language" id="dropdown" required>
-                    <option disabled selected value>Select current language</option>
+                    <option disabled selected value>Select language</option>
                     <option value="english">English</option>
                     <option value="spanish">Spanish</option>
                     <option value="german">German</option>
@@ -59,80 +61,82 @@
             <div class="form-group">
                 <p>How likely are you to recommend our courses to your friends?</p>
                 
-                <label>Very likely
+                <label class="label-radio">
                     <input type="radio" 
                            name="student-recommend" 
                            class="input-radio" 
                            value="Very likely" 
-                           checked>
+                           checked>Very likely
                 </label>
                 
-                <label>Somewhat likely
+                <label class="label-radio">
                      <input type="radio" 
                            name="student-recommend" 
                            class="input-radio" 
-                           value="Somewhat likely">
+                           value="Somewhat likely">Somewhat likely
                 </label>
                 
-                <label>Somewaht unlikely
+                <label class="label-radio">
                     <input type="radio" 
                            name="student-recommend"
                            class="input-radio"
-                           value="Somewhat unlikely">
+                           value="Somewhat unlikely">Somewhat unlikely
                 </label>
                    
-                <label>Very unlikely
+                <label class="label-radio">
                     <input type="radio"
                            name="student-recommend"
                            class="input-radio"
-                           value="Very unlikely">
+                           value="Very unlikely">Very unlikely
                 </label>
             </div>
 
             <div class="form-group">
                 <p>What is your main reason for learning a new language?</p>
 
-                <label for="work">Work
+                <label class="label-checkbox">
                     <input type="checkbox" 
                            name="purpose" 
                            class="input-checkbox" 
-                           value="work">
+                           value="work">Work
                 </label>
 
-                <label for="academic">Academic
+                <label class="label-checkbox">
                     <input type="checkbox" 
                            name="purpose" 
                            class="input-checkbox" 
-                           value="academic">
+                           value="academic">Academic
                 </label>
 
-                <label for="language-interest">Personal interest in languages
+                <label class="label-checkbox">
                     <input type="checkbox" 
                            name="purpose" 
                            class="input-checkbox" 
-                           value="language-interest">
+                           value="language-interest">Personal interest in languages
                 </label>
 
                
-                <label for="other">Other
+                <label class="label-checkbox">
                     <input type="checkbox" 
                            name="purpose" 
-                           class="input-checkbox" 
-                           value="other">
+                           class="input-checkbox"
+                           value="other">Other 
                 </label>
 
-                <label id="other-reason-label" for="other-reason">If you have chosen other, please describe your reason briefly.
-                <input type="text"
-                       name="other-reason"
-                       id="other-reason">
-                </label>
+                <br>
+
+                <p>If you have chosen other, please describe your reason briefly.</p>
+                <textarea name="other-reason" 
+                          id="other-reason" 
+                          cols="40" rows="10"
+                          placeholder="Please write here"></textarea>
             </div>
 
             <div class="form-group">
                 <p>Your comments and suggestions.</p>
                 <textarea name="comments" 
                           id="comments" 
-                          cols="30" rows="10"
+                          cols="40" rows="10"
                           placeholder="Please write here"></textarea>
             </div>
 
