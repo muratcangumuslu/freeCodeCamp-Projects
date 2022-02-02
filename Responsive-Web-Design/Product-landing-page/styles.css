@@ -10,6 +10,14 @@ html {
     box-sizing: inherit;
   }
 
+  html {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(https://images.unsplash.com/photo-1607499699372-7bb722dff7e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
   body,
   html {
     height: 100%;
@@ -31,7 +39,7 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color:#001535
+    background-color:hsl(214deg 93% 6%)
 }
 
 #three-birds img {
@@ -42,3 +50,98 @@ html {
 #middle-container {
     margin-top: 8em;
 }
+
+#header-img {
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-bottom: 1em;
+}
+
+#nav-bar ul{
+    display: flex;
+    margin-top: 1em;
+    margin-right: 2.5em;
+    margin-bottom: 1em;
+}
+
+#nav-bar ul li {
+    margin: 0.7em;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: rgb(245, 241, 198);
+}
+
+#middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video {
+    margin: 1.5em;
+}
+
+#form-title {
+    margin-top: 2em;
+    color: rgb(245, 241, 198);
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#video-title {
+    margin-top: 3em;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(245, 241, 198);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#form {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#email {
+    border: solid 0.2em palegoldenrod;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#submit {
+    border: 0.2em solid palegoldenrod;
+    border-radius: 2%;
+    font-size: 0.9em;
+}
+
+#three-birds {
+    display: flex;
+    margin-top: 3em;
+}
+
+#night-owls, #early-birds, #mid-day-magpies {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 3em;
+    color: rgb(245, 241, 198);
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#three-birds img {
+    margin-bottom: 0.8em;
+}
+
+
+
