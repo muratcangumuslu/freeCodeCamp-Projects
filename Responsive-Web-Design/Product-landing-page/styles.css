@@ -24,9 +24,11 @@ html {
   }
 
 #header-img {
+    padding: 1em;
+    background-color: seagreen;
     height: 5em;
     width: 5em;
-    border-radius: 50%;
+    border-radius: 40%;
 }
 
 .nav-link {
