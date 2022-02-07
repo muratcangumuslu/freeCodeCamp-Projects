@@ -144,4 +144,137 @@ a {
 }
 
 
+#quote {
+    margin-top: 1em;
+    font-size: 3em;
+    font-family: 'Bad Script', cursive, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(245, 241, 198)
+}
+
+#quote-owner {
+    font-size: 0.4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+footer {
+    height: 4em;
+    margin-top: 6em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(214deg 93% 6%)
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(245, 241, 198);
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer p {
+    color: rgb(245, 241, 198);
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+
+a.nav-link:hover, em:hover {
+    cursor:pointer;
+   }
+
+
+@media (max-width: 600px) {
+
+    #header {
+      margin: auto;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    #header-img {
+        margin-left: 1em;
+    }
+
+    #nav-bar ul {
+        margin-left: 1em;
+        flex-direction: column;
+    }
+
+    #middle-container {
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    #video {
+        margin-left: 0.5em;
+        width: auto;
+        height: auto;
+    }
+
+    #video-title {
+        margin-left: 5em;
+        margin-top: 4em;
+        margin-bottom: 1em;
+        font-size: large;
+    }  
+
+    #three-birds {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    #night-owls, #early-birds, #mid-day-magpies {
+        margin-left: 5em;
+        margin-top: 1em;
+        font-size: medium;
+    }
+
+    #night-owls {
+        margin-top: 6em;
+    }
+    
+   #quote {
+       margin-left: 1em;
+       margin-bottom: 1em;
+   }
+   
+
+    #quote-text {
+        font-size: 0.5em;
+    }
+
+    #quote-owner {
+        font-size: 0.2em;
+    }
+
+    footer {
+        justify-content: left;
+        margin: 0;
+        padding-left: 4.5em;
+    }
+
+    footer a {
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    footer p {
+        font-size: small;
+    }
+
+    #form-title {
+        margin-left: 2em;
+        margin-top: 10em;
+        font-size: large;
+    }
+
+    #form {
+        margin-left: 3.5em;
+    }
+  }
 
