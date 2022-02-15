@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>HTML Documentation</header>
+        <a class="nav-link" href="#Introduction_to_HTML_overview">Introduction to HTML overview</a>
+        <a class="nav-link" href="#Getting_started_with_HTML">Getting started with HTML</a>
+        <a class="nav-link" href="#What's_in_the_head?_Metadata_in_HTML">What's in the head? Metadata in HTML</a>
+        <a class="nav-link" href="#HTML_text_fundamentals">HTML text fundamentals</a> 
+        <a class="nav-link" href="#Creating_hyperlinks">Creating hyperlinks</a>
+        <a class="nav-link" href="#Advanced_text_formatting">Advanced text formatting</a>
+        <a class="nav-link" href="#Document_and_website_structure">Document and website structure</a>
+        <a class="nav-link" href="#Debugging_HTML">Debugging HTML</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_HTML_overview">
+            <header>Introduction to HTML overview</header>
+            <p>At its heart, HTML is a fairly simple language made up of elements, which can be applied to pieces of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? A navigation menu?), and embed content such as images and videos into a page. This module will introduce the first two of these and introduce fundamental concepts and syntax you need to know to understand HTML.</p>
+            <h3>Prerequisites</h3>
+            <p><p>Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in Installing basic software), and understand how to create and manage files (as detailed in Dealing with files). Both are parts of our Getting started with the web complete beginner's module.</p>
+            <h3>Guides</h3>
+            <p>This module contains the following articles, which will take you through all the basic theory of HTML and provide ample opportunity for you to test out some skills.</p>
+                <ul>
+                    <li>Getting started with HTML</li>
+                    <li>What’s in the head? Metadata in HTML</li>
+                    <li>HTML text fundamentals</li>
+                    <li>Creating hyperlinks</li>
+                    <li>Advanced text formatting</li>
+                    <li>Document and website structure</li>
+                    <li>Debugging HTML</li>
+                </ul>
+        </section>
+        <section class="main-section" id="Getting_started_with_HTML">
+            <header>Getting started with HTML</header> 
+            <p>In this article we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too! </p>
+            <h3>What is HTML?</h3>
+            <p>HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:  
+            <br> 
+            <code>My cat is very grumpy</code> </br>
+            If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph element:
+            <br>
+            <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code> </br>
+            </p>
+            <h3>Anatomy of an HTML element</h3>
+            <p>Let's further explore our paragraph element from the previous section.The anatomy of our element is:
+            <ul>
+                <li> <em>The opening tag: </em> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                <li><em>The content</em>This is the content of the element. In this example, it is the paragraph text.</li>
+                <li><em>The closing tag:</em>This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+            </ul>
+            </p>
+        </section>
+        <section class="main-section" id="What's_in_the_head?_Metadata_in_HTML">
+            <header>What's in the head? Metadata in HTML</header>
+            <p>The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page &lt;title&gt;, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document). Web browsers use information contained in the head to render the HTML document correctly. In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
+            <h3>What is the HTML head?</h3>
+            <p>Let's revisit the simple HTML document we covered in the previous article: <br> 
+                <code> &lt;!DOCTYPE html&gt;
+                   <br>&lt;html&gt; </br>
+                    <br> &nbsp;&nbsp; &lt;head&gt; </br>
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;  &lt;meta charset="utf-8"&gt; </br>
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;  &lt;title&gt;My test page&lt;/title&gt; </br>
+                        <br> &nbsp;&nbsp; &lt;/head&gt; </br>
+                      <br> &nbsp;&nbsp; &lt;body&gt; </br>
+                      <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;This is my page&lt;/p&gt; </br>
+                      <br> &nbsp;&nbsp; &lt;/body&gt; </br>
+                    <br> &lt;/html&gt; </br>
+                </code> </br>
+                The HTML head is the contents of the &lt;head&gt; element. Unlike the contents of the &lt;body&gt; element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. In the above example, the head is quite small: 
+                <code> 
+                   <br> &lt;head&gt; </br>
+                       <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8"&gt; </br>
+                       <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My test page&lt;/title&gt; </br>
+                      <br> &lt;/head&gt; </br>
+                </code>
+                In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the developer tools to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity.
+            </p>
+            <h3>Adding a title</h3>
+            <p>We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however can get confused with the &lt;h1&gt; element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
+            <ul>
+                <li>The &lt;h1&gt; element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)</li>
+                <li>The &lt;title&gt; element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
+            </ul>
+        </section>
+        <section class="main-section" id="HTML_text_fundamentals">
+            <header>HTML text fundamentals</header>
+            <p>
+                <ul>
+                    <li></li>
+                </ul>
+            </p>
+            <p></p> 
+            <code></code>
+        </section>
+        <section class="main-section" id="Creating_hyperlinks">
+            <header>Creating hyperlinks</header>
+            <p>
+             <ul>
+                 <li></li>
+             </ul>
+            </p>
+            <code></code> 
+        </section>
+        <section class="main-section" id="Advanced_text_formatting">
+            <header>Advanced text formatting</header>
+            <p></p>
+            <p></p> 
+            <code></code>
+        </section>
+        <section class="main-section" id="Document_and_website_structure">
+            <header>Document and website structure</header>
+            <p></p> 
+            <code></code>
+        </section>
+        <section class="main-section" id="Debugging_HTML">
+            <header>Debugging HTML</header>
+            <p></p>
+            <p></p>
+            <code></code>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+</body>
+
+<!--left at user story 10--> 
+</html>
