@@ -15,8 +15,39 @@ html {
  }
 
  #navbar {
+   margin: 0;
    display: flex;
    flex-direction: column;
-   position: sticky;
-   left: 0;
+   position: fixed;
+   align-items: center;
+   padding: 1.5em 0em 1.5em;
+   border-right: solid 0.2em;
+   border-color: rgb(179, 189, 199);
+   height: 100%;
+ }
+
+#navbar header {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link {
+  color:rgb(36, 35, 35);
+  text-decoration: none;
+  margin: 1.5em 0em 0em;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: solid 0.1em;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0em;
+  border-color: rgb(179, 189, 199);
+  width: 100%;
+  padding: 0.4em;
+}
+
+ #main-doc {
+   margin-left: 20em;
  }
