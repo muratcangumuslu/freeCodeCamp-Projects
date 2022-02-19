@@ -18,6 +18,7 @@
         <a class="nav-link" href="#Advanced_text_formatting">Advanced text formatting</a>
         <a class="nav-link" href="#Document_and_website_structure">Document and website structure</a>
         <a class="nav-link" href="#Debugging_HTML">Debugging HTML</a>
+        <a id="fcclink" target="_blank" href="https://www.freecodecamp.org/learn/responsive-web-design/">for <em>freeCodeCamp</em></a>
     </nav>
     <main id="main-doc">
 
@@ -27,7 +28,7 @@
             <h3>Prerequisites</h3>
             <p><p>Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in Installing basic software), and understand how to create and manage files (as detailed in Dealing with files). Both are parts of our Getting started with the web complete beginner's module.</p>
             <h3>Guides</h3>
-            <p>This module contains the following articles, which will take you through all the basic theory of HTML and provide ample opportunity for you to test out some skills.</p>
+            <p>This module contains the following articles, which will take you through all the basic theory of HTML and provide ample opportunity for you to test out some skills.
                 <ul>
                     <li>Getting started with HTML</li>
                     <li>What’s in the head? Metadata in HTML</li>
@@ -37,7 +38,7 @@
                     <li>Document and website structure</li>
                     <li>Debugging HTML</li>
                 </ul>
-
+            </p>
 
         </section>
         <section class="main-section" id="Getting_started_with_HTML">
@@ -45,15 +46,18 @@
             <p>In this article we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too! </p>
 
             <h3>What is HTML?</h3>
-            <p>HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:  
+            <p>HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:</p>
+
                 <br> 
-                    <code>My cat is very grumpy</code> 
+                    <code class="codey">My cat is very grumpy</code> 
                 </br>
-            If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph element:
+
+            <p> If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph element:</p>
+
                 <br>
-                    <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code> 
+                    <code class="codey">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code> 
                 </br>
-            </p>
+            
 
             <h3>Anatomy of an HTML element</h3>
             <p>Let's further explore our paragraph element from the previous section.The anatomy of our element is:
@@ -71,27 +75,28 @@
             <p>The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page &lt;title&gt;, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document). Web browsers use information contained in the head to render the HTML document correctly. In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
 
             <h3>What is the HTML head?</h3>
-            <p>Let's revisit the simple HTML document we covered in the previous article: <br> 
-                <code> &lt;!DOCTYPE html&gt;
-                   <br>&lt;html&gt; </br>
-                    <br> &nbsp;&nbsp; &lt;head&gt; </br>
-                        <br> &nbsp;&nbsp;&nbsp;&nbsp;  &lt;meta charset="utf-8"&gt; </br>
-                        <br> &nbsp;&nbsp;&nbsp;&nbsp;  &lt;title&gt;My test page&lt;/title&gt; </br>
-                        <br> &nbsp;&nbsp; &lt;/head&gt; </br>
-                      <br> &nbsp;&nbsp; &lt;body&gt; </br>
-                      <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;This is my page&lt;/p&gt; </br>
-                      <br> &nbsp;&nbsp; &lt;/body&gt; </br>
-                    <br> &lt;/html&gt; </br>
+            <p>Let's revisit the simple HTML document we covered in the previous article:</p> <br> 
+                <code><br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;!DOCTYPE html&gt;</br>
+                   <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;html&gt; </br>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;head&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &lt;meta charset="utf-8"&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &lt;title&gt;My test page&lt;/title&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;/head&gt; </br>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;body&gt; </br>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;This is my page&lt;/p&gt; </br>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;/body&gt; </br>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/html&gt; </br>
                 </code> </br>
-                The HTML head is the contents of the &lt;head&gt; element. Unlike the contents of the &lt;body&gt; element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. In the above example, the head is quite small: 
-                <code> 
-                   <br> &lt;head&gt; </br>
-                       <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8"&gt; </br>
-                       <br> &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My test page&lt;/title&gt; </br>
-                      <br> &lt;/head&gt; </br>
-                </code>
-                In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the developer tools to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity.
-            </p>
+            <p>The HTML head is the contents of the &lt;head&gt; element. Unlike the contents of the &lt;body&gt; element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. In the above example, the head is quite small:</p> 
+                <br> 
+                    <code> 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;head&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8"&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My test page&lt;/title&gt; </br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/head&gt; </br>
+                    </code>
+                </br>
+            <p>In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the developer tools to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity.</p>
 
             <h3>Adding a title</h3>
             <p>We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however can get confused with the &lt;h1&gt; element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
@@ -111,18 +116,21 @@
             <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.
             Structured content makes the reading experience easier and more enjoyable.</p> 
 
-            <p>In HTML, each paragraph has to be wrapped in a &lt;p&gt; element, like so:
-               <br>
-                    <code> &lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
-               </br>
-            </p> 
+            <p>In HTML, each paragraph has to be wrapped in a &lt;p&gt; element, like so:</p> 
 
-            <p>Each heading has to be wrapped in a heading element:
+               <br>
+                    <code class="codey"> &lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
+               </br>
+            
+
+            <p>Each heading has to be wrapped in a heading element:</p> 
+
                 <br> 
-                    <code> &lt;h1&gt;I am the title of the story.&lt;/h1&gt; </code>
+                    <code class="codey"> &lt;h1&gt;I am the title of the story.&lt;/h1&gt;</code>
                 </br>
-            There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document; h1 represents the main heading, h2 represents subheadings, h3 represents sub-subheadings, and so on.
-            </p> 
+
+            <p>There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document; h1 represents the main heading, h2 represents subheadings, h3 represents sub-subheadings, and so on.</p>
+            
                
 
         </section>
@@ -135,10 +143,12 @@
 
             <h3>Anatomy of a link</h3>
             <p>A basic link is created by wrapping the text or other content, see Block level links, inside an &lt;a&gt; element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
-                <code> <br> &lt;p&gt;I'm creating a link to </br>
-                    &lt;a&gt; href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.
-                    <br>&lt;/p&gt;</br>  
-                </code>
+
+               <br><code>&lt;p&gt;I'm creating a link to</code></br>
+                <code>&nbsp;&nbsp;&lt;a&gt; href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.</code>
+                    <code><br>&lt;/p&gt; 
+                </code></br>  
+               
 
             <h3>Active learning: creating your own example link</h3>
             <p>Create an HTML document using your local code editor.
@@ -172,12 +182,12 @@
             <h3>Basic sections of a document</h3>
             <p>Webpages can and will look pretty different from one another, but they all tend to share similar standard components, unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly structured:
                 <ul>
-                    <li><em>header:</em> (<code>&lt;header&gt;</code>) Usually a big strip across the top with a big heading, logo, and perhaps a tagline. This usually stays the same from one webpage to another.</li>
-                    <li><em>navigation bar:</em> (<code>&lt;nav&gt;</code>)Links to the site's main sections; usually represented by menu buttons, links, or tabs. Like the header, this content usually remains consistent from one webpage to another — having inconsistent navigation on your website will just lead to confused, frustrated users. Many web designers consider the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in fact, some also argue that having the two separate is better for accessibility, as screen readers can read the two features better if they are separate.
+                    <li><em>header:</em> <code>&lt;header&gt;</code> Usually a big strip across the top with a big heading, logo, and perhaps a tagline. This usually stays the same from one webpage to another.</li>
+                    <li><em>navigation bar:</em> <code>&lt;nav&gt;</code>Links to the site's main sections; usually represented by menu buttons, links, or tabs. Like the header, this content usually remains consistent from one webpage to another — having inconsistent navigation on your website will just lead to confused, frustrated users. Many web designers consider the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in fact, some also argue that having the two separate is better for accessibility, as screen readers can read the two features better if they are separate.
                     </li>
-                    <li><em>main content:</em> (<code>&lt;main&gt;</code>)A big area in the center that contains most of the unique content of a given webpage, for example, the video you want to watch, or the main story you're reading, or the map you want to view, or the news headlines, etc. This is the one part of the website that definitely will vary from page to page!</li>
-                    <li><em>side bar:</em> (<code>&lt;aside&gt;</code>)Some peripheral info, links, quotes, ads, etc. Usually, this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but there are also cases where you'll find some recurring elements like a secondary navigation system.</li>
-                    <li><em>footer:</em> (<code>&lt;footer&gt;</code>)A strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critical or secondary to the website itself. The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.</li>
+                    <li><em>main content:</em> <code>&lt;main&gt;</code>A big area in the center that contains most of the unique content of a given webpage, for example, the video you want to watch, or the main story you're reading, or the map you want to view, or the news headlines, etc. This is the one part of the website that definitely will vary from page to page!</li>
+                    <li><em>side bar:</em> <code>&lt;aside&gt;</code>Some peripheral info, links, quotes, ads, etc. Usually, this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but there are also cases where you'll find some recurring elements like a secondary navigation system.</li>
+                    <li><em>footer:</em> <code>&lt;footer&gt;</code>A strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critical or secondary to the website itself. The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.</li>
                 </ul>
             </p>
             
@@ -196,11 +206,14 @@
                     <li><em>Syntax errors:</em>These are spelling or punctuation errors in your code that actually cause the program not to run, like the Rust error shown above. These are usually easy to fix as long as you are familiar with the language's syntax and know what the error messages mean.</li>
                     <li><em>Logic errors:</em>These are errors where the syntax is actually correct, but the code is not what you intended it to be, meaning that the program runs incorrectly. These are often harder to fix than syntax errors, as there isn't an error message to direct you to the source of the error.</li>
                 </ul>
-            HTML itself doesn't suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you'll get something running, even if it is not what you expected. This, of course, can still be a problem!
+            <p>HTML itself doesn't suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you'll get something running, even if it is not what you expected. This, of course, can still be a problem!
             </p>
         </section>
-
     </main>
+
+    <footer>
+        <p>All the information on this site is taken from <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"><em>MDN Web Docs</em></a></p>
+    </footer>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
     </script>
