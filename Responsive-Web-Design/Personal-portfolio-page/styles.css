@@ -29,16 +29,21 @@ header {
   align-items: center;
   margin-top: 7em;
   width: 100%;
-  height: 20em;
+  height: 100vh;
   font-family:'Poppins', sans-serif;
 }
 
-
-#projects h2 {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  font-family: 'Poppins', sans-serif;
+h1 {
+  font-size: 5em;
+  margin-top: 2em;
 }
+
+p {
+  font-size: large;
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
 
 #navbar ul {
   display: flex;
@@ -69,29 +74,33 @@ ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(207, 215, 199);
+  background-color: #fcf8e6f5
+}
+
+#projects h2 {
+  font-size: 2.4em;
+  margin-top: 2.2em;
+  margin-bottom: 1.4em;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 0.1em solid #000;
+  padding-bottom: 0.2em;
 }
 
 .project-image {
   width: 20em;
   height: 16em;
   object-fit: fill;
+  border: solid rgba(112, 169, 161, 0.781) 0.2em;
   border-radius: 10%;
 }
-/*  
-#projects-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  gap: 5em;
-}
-*/
+
 
 #projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4em 8em;
+  gap: 4em 12em;
+  margin-bottom: 2em;
 }
 
 .project-tile {
@@ -99,8 +108,8 @@ ul li a {
 }
 
 .project-tile p {
+  padding: 0.5em;
   font-family: 'Poppins', sans-serif;
-  margin-top: 1em;
   color: black;
   font-size: large;
   font-weight: bold;
@@ -110,20 +119,157 @@ ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2em;
+  min-height: 100vh;
+}
+
+#contactp1 {
+  margin-right: 7em;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 3em;
+}
+
+#contactp2 {
+  margin-left: 7em;
+  margin-top: 0.8em;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#contactp3 {
+  margin-top: 1em;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+#contact h2 {
+  margin-top: 0.8em;
+  font-size: 2.4em;
+  margin-bottom: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-links {
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.contact-links a {
+  text-align: center;
+}
+
+.contact-links a .contact-symbols {
+  transition: all 0.8s;
+  box-sizing: border-box;
+}
+
+.contact-links a:hover .contact-symbols {
+  transform: rotate(360deg);
 }
 
 .contact-symbols {
-  width: 12em;
+  width: 40%;
   height: auto;
-  object-fit: fill;
 }
 
-#mail-logo {
-  width: 6em;
+footer {
+  border-top: solid 0.4em;
+  border-color: rgb(11, 32, 39);
+  margin-top: 2em;
+  text-align: center;
+  width: 100%;
 }
 
-.contact-links{
-  display: flex;
-  justify-content: center;
+footer p {
+  padding-top: 0.2em;
+  font-size: medium;
+  font-family: 'Poppins', sans-serif;
+  margin: 0.2em 1em 0.2em;
+}
+
+
+@media (max-width: 480px) {
+
+  header {
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #navbar ul {
+    font-size: large;
+    margin-left: 1em;
+  }
+
   
+  #welcome-section {
+    margin-top: auto;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 2.5em;
+  }
+
+  p {
+    padding: 0em;
+    text-align: center;
+    margin: 0.5em 0.3em 0em;
+  }
+
+  #projects h2 {
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  .contact-links {
+    margin-top: 0em;
+  }
+
+  #contactp1 {
+    margin-right: 0em;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 0em;
+  }
+
+  #contactp2 {
+    margin-left: 0em;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 0.4em;
+    margin-bottom: 0em;
+  }
+
+  #contact h2 {
+    margin-top: 0.8em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  #contactp3 {
+    margin-left: 0em;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+
+  footer {
+    margin-top: 0em;
+  }
+
+  .contact-symbols {
+    margin-top: 1em;
+    width: 36%;
+    height: auto;
+  }
 }
